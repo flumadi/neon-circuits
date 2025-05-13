@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Circuits | Futuristic Tech Blog</title>
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <header>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        <h1 class="logo">Neon<span>Circuits</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Where Technology Meets Imagination</h2>
+            <p>Exploring the frontiers of AI, quantum computing, and neurotechnology</p>
+            <button onclick="askOracle()">Ask the AI Oracle</button>
+        </div>
+        <div class="hero-glitch"></div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="featured">
+        <h2>✨ Featured Articles</h2>
+        <div class="article-grid">
+            <article class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #6e48aa, #37b6f6);"></div>
+                <h3>The Future of AI: Beyond ChatGPT</h3>
+                <p class="author">By Andrej Karpathy</p>
+                <p>Exploring what comes after large language models in artificial intelligence...</p>
+                <a href="https://www.technologyreview.com/2023/02/08/1068059/whats-next-for-ai/" target="_blank" class="read-more">Read More →</a>
+            </article>
+            
+            <article class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #ff4f8b, #6e48aa);"></div>
+                <h3>Quantum Computing in 2025</h3>
+                <p class="author">By Scott Aaronson</p>
+                <p>Assessing the current state of quantum supremacy and practical applications...</p>
+                <a href="https://www.nature.com/articles/s41567-023-02306-x" target="_blank" class="read-more">Read More →</a>
+            </article>
+            
+            <article class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #37b6f6, #ff4f8b);"></div>
+                <h3>Neuralink's Breakthrough</h3>
+                <p class="author">By Elon Musk</p>
+                <p>How brain-computer interfaces are evolving in 2025 and what it means for humanity...</p>
+                <a href="https://neuralink.com/blog/" target="_blank" class="read-more">Read More →</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Tech Pulse Widget -->
+    <section class="tech-pulse">
+        <h2>📡 Live Tech Pulse</h2>
+        <div id="news-feed">
+            <p>Loading latest tech news...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Neon Circuits | Thee tech blog</p>
+        <div class="social-links">
+            <a href="https://twitter.com/neoncircuits" target="_blank">Twitter</a>
+            <a href="https://github.com/neoncircuits" target="_blank">GitHub</a>
+            <a href="mailto:hello@neoncircuits.tech">Email</a>
+        </div>
+    </footer>
+
+    <script src="scripts/theme-toggle.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
