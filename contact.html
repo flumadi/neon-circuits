@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Neon Circuits</title>
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        <h1 class="logo">Neon<span>Circuits</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-hero">
+            <h2>Contact Us</h2>
+            <p>Ideas? Collaborations? Just want to chat about the future?</p>
+            <div class="contact-glitch"></div>
+        </section>
+
+        <div class="contact-content">
+            <section class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="collab">Collaboration Idea</option>
+                            <option value="article">Article Suggestion</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message →</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h3>Other Ways to Connect</h3>
+                <div class="info-card">
+                    <h4>📬 Email</h4>
+                    <p><a href="mailto:hello@neoncircuits.tech">hello@neoncircuits.tech</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>🐦 Twitter/X</h4>
+                    <p><a href="https://twitter.com/neoncircuits" target="_blank">@neoncircuits</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>💻 GitHub</h4>
+                    <p><a href="https://github.com/neoncircuits" target="_blank">github.com/neoncircuits</a></p>
+                </div>
+                
+                <div class="info-card">
+                    <h4>📍 Based In</h4>
+                    <p>Digital Nomads<br>Currently orbiting between Berlin, Tokyo, and the Metaverse</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Neon Circuits | Thee tech blog</p>
+        <div class="social-links">
+            <a href="https://twitter.com/neoncircuits" target="_blank">Twitter</a>
+            <a href="https://github.com/neoncircuits" target="_blank">GitHub</a>
+            <a href="mailto:hello@neoncircuits.tech">Email</a>
+        </div>
+    </footer>
+
+    <script src="scripts/theme-toggle.js"></script>
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent! (This is a demo - form submission would be handled by backend in production)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

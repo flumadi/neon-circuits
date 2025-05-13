@@ -1,0 +1,23 @@
+:root {
+    /* Light Theme */
+    --bg-primary: #f9f9f9;
+    --bg-secondary: #ffffff;
+    --text-primary: #0f0e17;
+    --text-secondary: #2e2e2e;
+    --accent-purple: #6e48aa;
+    --accent-blue: #37b6f6;
+    --accent-pink: #ff4f8b;
+    --glow-effect: 0 0 15px rgba(110, 72, 170, 0.5);
+}
+
+[data-theme="dark"] {
+    /* Dark Theme */
+    --bg-primary: #0f0e17;
+    --bg-secondary: #1a1a2e;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e2e2;
+    --accent-purple: #9d65c9;
+    --accent-blue: #5ac8fa;
+    --accent-pink: #ff7ba3;
+    --glow-effect: 0 0 20px rgba(157, 101, 201, 0.7);
+}

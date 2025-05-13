@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Neon Circuits</title>
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+        <h1 class="logo">Neon<span>Circuits</span></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="articles-container">
+        <section class="articles-hero">
+            <h2>Latest <span>Tech</span> Explorations</h2>
+            <p>Dive into the surreal future of technology</p>
+            <div class="articles-glitch"></div>
+        </section>
+
+        <section class="filter-bar">
+            <div class="search-box">
+                <input type="text" placeholder="Search articles..." id="search-input">
+                <button onclick="searchArticles()">🔍</button>
+            </div>
+            <div class="filter-tags">
+                <button class="tag active" onclick="filterArticles('all')">All</button>
+                <button class="tag" onclick="filterArticles('ai')">AI</button>
+                <button class="tag" onclick="filterArticles('quantum')">Quantum</button>
+                <button class="tag" onclick="filterArticles('neurotech')">Neurotech</button>
+                <button class="tag" onclick="filterArticles('futurism')">Futurism</button>
+            </div>
+        </section>
+
+        <section class="articles-grid">
+            <!-- Article 1 - Real MIT Tech Review Article -->
+            <article class="article-card" data-tags="ai futurism">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));">
+                    <span class="article-tag">AI</span>
+                </div>
+                <div class="article-content">
+                    <h3>What's Next for AI: Four Real-World Developments</h3>
+                    <p class="article-meta">By MIT Technology Review | 2023</p>
+                    <p class="article-excerpt">How AI is moving beyond chatbots into robotics, science, and creative fields...</p>
+                    <a href="https://www.technologyreview.com/2023/02/08/1068059/whats-next-for-ai/" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Article 2 - Real Nature Quantum Article -->
+            <article class="article-card" data-tags="quantum">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-pink));">
+                    <span class="article-tag">Quantum</span>
+                </div>
+                <div class="article-content">
+                    <h3>Quantum Computing 2025 Roadmap</h3>
+                    <p class="article-meta">By Nature Physics | 2024</p>
+                    <p class="article-excerpt">Researchers outline the path to practical quantum advantage...</p>
+                    <a href="https://www.nature.com/articles/s41567-023-02306-x" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Article 3 - Real Neuralink Update -->
+            <article class="article-card" data-tags="neurotech futurism">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));">
+                    <span class="article-tag">Neurotech</span>
+                </div>
+                <div class="article-content">
+                    <h3>Neuralink's First Human Trials</h3>
+                    <p class="article-meta">By Neuralink Blog | 2024</p>
+                    <p class="article-excerpt">Initial results from the PRIME study for brain-computer interfaces...</p>
+                    <a href="https://neuralink.com/blog/" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Article 4 - Real AI Architecture Project -->
+            <article class="article-card" data-tags="ai">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));">
+                    <span class="article-tag">AI</span>
+                </div>
+                <div class="article-content">
+                    <h3>AI-Designed Buildings Now Under Construction</h3>
+                    <p class="article-meta">By Dezeen | 2024</p>
+                    <p class="article-excerpt">How Midjourney and Stable Diffusion are influencing real architecture...</p>
+                    <a href="https://www.dezeen.com/2024/01/15/ai-architecture-design-projects/" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Article 5 - Real Quantum Internet Progress -->
+            <article class="article-card" data-tags="quantum futurism">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));">
+                    <span class="article-tag">Quantum</span>
+                </div>
+                <div class="article-content">
+                    <h3>China's 4,600km Quantum Network</h3>
+                    <p class="article-meta">By Science Journal | 2023</p>
+                    <p class="article-excerpt">The world's longest quantum-secured communication line...</p>
+                    <a href="https://www.science.org/doi/10.1126/science.abo4747" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Article 6 - Real Neurotech Memory Research -->
+            <article class="article-card" data-tags="neurotech">
+                <div class="article-image" style="background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue));">
+                    <span class="article-tag">Neurotech</span>
+                </div>
+                <div class="article-content">
+                    <h3>Memory Implants Show Promise in Early Trials</h3>
+                    <p class="article-meta">By Scientific American | 2023</p>
+                    <p class="article-excerpt">Hippocampal prosthetics restore memory function in clinical studies...</p>
+                    <a href="https://www.scientificamerican.com/article/memory-implants-may-help-bypass-damaged-brain-regions/" target="_blank" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="newsletter">
+            <h3>⚡ Get Future Articles Directly</h3>
+            <p>Subscribe to our surreal tech newsletter</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Neon Circuits | A surreal tech blog</p>
+        <div class="social-links">
+            <a href="https://twitter.com/neoncircuits" target="_blank">Twitter</a>
+            <a href="https://github.com/neoncircuits" target="_blank">GitHub</a>
+            <a href="mailto:hello@neoncircuits.tech">Email</a>
+        </div>
+    </footer>
+
+    <script src="scripts/theme-toggle.js"></script>
+    <script>
+        // Article filtering functionality
+        function filterArticles(tag) {
+            const articles = document.querySelectorAll('.article-card');
+            const tagButtons = document.querySelectorAll('.filter-tags .tag');
+            
+            // Update active tag button
+            tagButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === tag || (tag === 'all' && btn.textContent === 'All')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter articles
+            articles.forEach(article => {
+                if (tag === 'all' || article.dataset.tags.includes(tag)) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+        
+        // Search functionality
+        function searchArticles() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const articles = document.querySelectorAll('.article-card');
+            
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const excerpt = article.querySelector('.article-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+        
+        // Newsletter form
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Subscribed! (This is a demo - would connect to newsletter service in production)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
